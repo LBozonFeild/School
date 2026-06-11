@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'a',
     'cloudinary',
     'django_cloudinary_storage',
-    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
