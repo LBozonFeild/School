@@ -11,5 +11,6 @@ urlpatterns = [
     path("dashboard/", views.dashboard),
     path("logout/", views.logout_view),
     path("admin/", admin.site.urls),
+    path("t/", views.test),
 ]
 

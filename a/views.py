@@ -64,7 +64,11 @@ def dashboard(request):
         "upcoming_files": upcoming_files
     })
 
+from django.http import HttpResponse
+from django.core.files.storage import default_storage
 
+def test(request):
+    return HttpResponse(str(type(default_storage)))
 def logout_view(request):
     request.session.flush()
     return redirect("auth")
