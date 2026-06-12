@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'a',
+
     'cloudinary',
-    'django_cloudinary_storage',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -123,15 +125,21 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 import cloudinary
-import cloudinary.uploader
-import cloudinary.api
 
+cloudinary.config(
+    cloud_name='dv5ugppwe',
+    api_key='198693477149888',
+    api_secret='dn3c82I76YGETtASp2niVDOF8Pg',
+)
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dv5ugppwe',
-    'API_KEY': '198693477149888',
-    'API_SECRET': 'dn3c82I76YGETtASp2niVDOF8Pg',
+    'API_KEY': "198693477149888",
+    'API_SECRET': "dn3c82I76YGETtASp2niVDOF8Pg",
 }
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+DEFAULT_FILE_STORAGE = (
+    'cloudinary_storage.storage.MediaCloudinaryStorage'
+)
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
